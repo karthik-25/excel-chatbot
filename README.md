@@ -155,8 +155,3 @@ DELETE /delete?id=2
   "message": "Row deleted successfully"
 }
 ```
-
-## Conclusion
-
-This API simplifies the process of managing an Excel file, making it accessible for non-technical users through a chatbot interface.
-```
