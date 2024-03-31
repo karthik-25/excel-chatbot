@@ -1,1 +1,3 @@
 excelapi/
+.DS_Store
+.env
