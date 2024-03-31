@@ -3,11 +3,9 @@ import pandas as pd
 from google.cloud import storage
 from io import BytesIO
 import os
-from dotenv import load_dotenv
-load_dotenv()
 
-bucket_name = os.getenv("BUCKET_NAME")
-file_name = os.getenv("FILE_NAME")
+bucket_name = "excel-chatbot-bucket" #os.getenv("BUCKET_NAME")
+file_name = "Book1.xlsx" #os.getenv("FILE_NAME")
 
 app = Flask(__name__)
 
