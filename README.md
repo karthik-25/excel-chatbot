@@ -50,17 +50,7 @@ Ensure you have the following installed:
 
 ## Running the Application
 
-Start the application locally with Flask:
-
-```bash
-flask run
-```
-
-For production environments, use Gunicorn:
-
-```bash
-gunicorn -w 4 app:app
-```
+Use the API below to run the application
 
 ## API Usage
 
@@ -68,11 +58,14 @@ The API supports operations for adding, viewing, modifying, and deleting rows in
 
 ### Add Row
 
+https://excel-chatbot-2024.uc.r.appspot.com/add
+
 Add a new row to the Excel file.
 
 **Request:**
 
 ```http
+
 POST /add
 Content-Type: application/json
 
@@ -91,6 +84,8 @@ Content-Type: application/json
 ```
 
 ### View Rows
+
+https://excel-chatbot-2024.uc.r.appspot.com/view
 
 View all rows in the Excel file.
 
@@ -119,6 +114,8 @@ GET /view
 
 ### Modify Row
 
+https://excel-chatbot-2024.uc.r.appspot.com/modify
+
 Modify an existing row by ID.
 
 **Request:**
@@ -143,6 +140,8 @@ Content-Type: application/json
 ```
 
 ### Delete Row
+
+https://excel-chatbot-2024.uc.r.appspot.com/delete
 
 Delete a row by ID.
 
