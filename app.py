@@ -3,9 +3,10 @@ import pandas as pd
 from google.cloud import storage
 from io import BytesIO
 import os
+import requests
 
-bucket_name = "excel-chatbot-bucket" #os.getenv("BUCKET_NAME")
-file_name = "Book1.xlsx" #os.getenv("FILE_NAME")
+bucket_name = "excel-chatbot-bucket"
+file_name = "Book1.xlsx"
 
 app = Flask(__name__)
 
@@ -82,7 +83,7 @@ def save_excel_to_gcs(df, bucket_name, file_name):
     blob = bucket.blob(file_name)
     output = BytesIO()
     with pd.ExcelWriter(output, engine='openpyxl') as writer:
-        df.to_excel(writer)
+        df.to_excel(writer, index=False)
     blob.upload_from_string(output.getvalue(), content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
 
