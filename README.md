@@ -1,7 +1,4 @@
-# excel-chatbot
-
-
-# Excel Management API
+# Excel Chatbot
 
 This project provides a simple API for managing an Excel file. Users can add, view, modify, and delete rows in the Excel file through RESTful endpoints. This service is designed to be interacted with through an AI chatbot interface, simplifying operations for non-technical users.
 
