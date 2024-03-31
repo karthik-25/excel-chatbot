@@ -1,0 +1,15 @@
+runtime: python39
+
+env: standard
+
+entrypoint: gunicorn -b :$PORT main:app
+
+# If your application uses a library that requires a C extension, uncomment the following line.
+# You will also need a requirements.txt file in your project.
+# libraries:
+# - name: numpy
+#   version: latest
+
+handlers:
+- url: /.*
+  script: auto
