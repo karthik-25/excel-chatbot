@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel AI Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+        }
+        p, ul {
+            max-width: 600px;
+            text-align: center;
+            margin: 20px;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+        ul {
+            list-style-position: inside; /* Ensure list bullets are within the text alignment */
+        }
+        df-messenger {
+            z-index: 999;
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Excel AI Chatbot</h1>
+    <p>This intelligent assistant is here to help you manage your Excel data. 
+    <br><br>Simply type your requests to view your data, add new rows, delete specific rows, or modify existing ones, and the chatbot will handle them for you. 
+    <br><br>When adding, please use the format <code>{'column name': 'value', 'column name': 'value' ...}</code>. 
+    <br><br>For modifying, include the row number followed by the new data using the format <code>{'column name': 'value', 'column name': 'value' ...}</code>.
+    <br><br>If you wish to delete a row, just provide the row number. 
+    <br><br>Here are some examples: <br>
+    <em>Show me the data</em><br> 
+    <em>I want to add a row {'A': '10', 'B': '20', 'C': '30'}</em><br> 
+    <em>Please delete row 1</em><br>
+    <em>Modify row 2 to {'A': '77', 'B': '88', 'C': '99'}</em></p>
+
+    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <df-messenger
+    location="us-central1"
+    project-id="excel-chatbot-2"
+    agent-id="6d09ab45-105f-49a0-9ecd-aca974647dc6"
+    language-code="en"
+    max-query-length="-1">
+    <df-messenger-chat-bubble
+    chat-title="excel-chatbot-2">
+    </df-messenger-chat-bubble>
+    </df-messenger>
+    <style>
+    df-messenger {
+        z-index: 999;
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+    }
+    </style>
+</body>
+</html>
